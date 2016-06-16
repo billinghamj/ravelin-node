@@ -1,6 +1,6 @@
 {
   "name": "ravelin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ravelin is a fraud detection tool. See https://ravelin.com",
   "homepage": "https://github.com/billinghamj/ravelin-node",
   "bugs": "https://github.com/billinghamj/ravelin-node/issues",
@@ -12,6 +12,7 @@
     "url": "https://github.com/billinghamj/ravelin-node.git"
   },
   "scripts": {
+    "prepublish": "npm run build",
     "build": "rm -rf ./build && babel src --out-dir=build --source-maps --copy-files --quiet",
     "test": "echo \"no tests yet\" && exit 0"
   },

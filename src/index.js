@@ -1,6 +1,7 @@
 import jsonClient from 'json-client';
 
 const millisPerSecond = 1000;
+const eventNameRegex = /^[a-z0-9_-]*$/i;
 
 type Options = {
 	baseUrl: ?string;
@@ -59,13 +60,8 @@ function validateEventName(name: string): void {
 	if (!name.length)
 		throw error('missing_event_name');
 
-	if (String.prototype.includes.call(name, '/'))
-		throw error('unsafe_event_name', { character: '/' });
-
-	if (String.prototype.includes.call(name, '\\'))
-		throw error('unsafe_event_name', { character: '\\' });
-
-	// todo: are there any other unsafe characters?
+	if (!eventNameRegex.test(name))
+		throw error('invalid_event_name', { allowedRegex: eventNameRegex });
 }
 
 function error(code: string, meta: ?{}): Error {
