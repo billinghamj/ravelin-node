@@ -130,6 +130,10 @@ await client.sendBackfillEvent('order', {
 });
 ```
 
+## Notes
+
+- event parameters must never contain a recursive reference
+
 ## Support
 
 Please open an issue on this repository.
