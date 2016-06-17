@@ -7,7 +7,7 @@ Ravelin is a fraud detection tool.
 import Ravelin from 'ravelin';
 
 const client = new Ravelin({
-	apiKey: 'sk_live_XXXXXXXX',
+	secretKey: 'sk_live_XXXXXXXX',
 });
 
 const result = await client.sendEventAndScore('order', {
@@ -46,14 +46,14 @@ First, set up a client by creating an instance of `Ravelin`.
 
 Options:
 
-- `apiKey` - the secret API key provided by the [Ravelin Dashboard](https://dashboard.ravelin.com/#/settings)
+- `secretKey` - the secret API key provided by the [Ravelin Dashboard](https://dashboard.ravelin.com/#/settings)
 
 This is the only option at the moment. If there is another option you want, open
 an issue explaining the use-case.
 
 ```js
 const client = new Ravelin({
-	apiKey: 'sk_live_XXXXXXXX',
+	secretKey: 'sk_live_XXXXXXXX',
 });
 ```
 

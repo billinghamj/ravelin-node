@@ -5,7 +5,7 @@ const eventNameRegex = /^[a-z0-9_-]*$/i;
 
 type Options = {
 	baseUrl: ?string;
-	apiKey: string;
+	secretKey: string;
 };
 
 export default class Ravelin {
@@ -19,7 +19,7 @@ export default class Ravelin {
 		};
 
 		this._client = jsonClient(this._options.baseUrl, {
-			headers: { authorization: `token ${this._options.apiKey}` },
+			headers: { authorization: `token ${this._options.secretKey}` },
 		});
 	}
 
