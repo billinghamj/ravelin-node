@@ -1,7 +1,7 @@
 # ravelin-node
 
-This is a client for the [Ravelin API](https://developer.ravelin.com). Ravelin
-is a fraud detection tool. See https://ravelin.com for more information.
+Server-side JS library for the [Ravelin API](https://developer.ravelin.com).
+Ravelin is a fraud detection tool.
 
 ```js
 import Ravelin from 'ravelin';
