@@ -84,7 +84,7 @@ function transformBody(value: any): any {
 		return Array.prototype.map.call(value, transformBody);
 
 	if (value === null)
-		return value;
+		return void 0;
 
 	if (typeof value !== 'object')
 		return value;

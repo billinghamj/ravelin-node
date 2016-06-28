@@ -133,6 +133,7 @@ await client.sendBackfillEvent('order', {
 ## Notes
 
 - event parameters must never contain a recursive reference
+- all `null` values will be removed entirely, and will not be sent to Ravelin
 
 ## Support
 
