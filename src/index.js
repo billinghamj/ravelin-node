@@ -83,14 +83,16 @@ function transformBody(value: any): any {
 	if (Array.isArray(value))
 		return Array.prototype.map.call(value, transformBody);
 
-	if (typeof value === 'object') {
-		const newBody = {};
+	if (value === null)
+		return value;
 
-		for (const [key, value] of Object.entries(value))
-			newBody[key] = transformBody(value);
+	if (typeof value !== 'object')
+		return value;
 
-		return newBody;
-	}
+	const newBody = {};
 
-	return value;
+	for (const [key, value] of Object.entries(value))
+		newBody[key] = transformBody(value);
+
+	return newBody;
 }
