@@ -1,6 +1,6 @@
 {
   "name": "ravelin",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Server-side JS library for the Ravelin API. Ravelin is a fraud detection tool.",
   "homepage": "https://github.com/billinghamj/ravelin-node",
   "bugs": "https://github.com/billinghamj/ravelin-node/issues",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.9.2",
-    "json-client": "^0.8.4"
+    "json-client": "^0.8.5"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
